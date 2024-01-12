@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Akash Weds Binal | Web Invitaion</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">	 
+	<link rel="icon" href="./images/ap_studio1.png" sizes="any">	
+	<link href="./css/bootstrap.min.css" rel="stylesheet" />
+	<link href="./css/fontawesome-all.min.css" rel="stylesheet" />
+	<link href="./css/style.css" rel="stylesheet" />
+	<meta property="og:description" content="COUNTDOWN OF THE WEDDINNG CEREMONY">
+	<meta property="og:image" content="https://apstudio2486.github.io/">
+</head>
+<body>
+	<div id="wrapper">
+		<header id="header">
+			<div class="nav-section light no-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<a href="index-invite.html" class="nav-logo"><img src="./images/logo-white.png" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- END HEADER -->
+		
+		
+		<!-- BEGIN HERO SECTION -->
+		<section id="hero" class="bg-slideshow">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+					
+						<div class="hero-wrapper v-center x-pad">
+							<img src="./images/couple.png" alt="couple image" class="heart"> 
+							<h1 class="hero-title light ">
+								<span data-animation-direction="from-left" data-animation-delay="300">Akash</span>
+								<small data-animation-direction="from-center" data-animation-delay="300">&</small>
+								<span data-animation-direction="from-right" data-animation-delay="300">Binal</span>
+							</h1>
+							<div class="hero-subtitle light" data-animation-direction="fade" data-animation-delay="1000">MAR <span>11</span> 2024 </div>
+							<div class="counter" id="timer"> </div>
+							<p data-animation-direction="fade" data-animation-delay="600">
+								What a wonderful day for our family, and especially you two. May the joy you feel today last a lifetime. Today, we add one more member to our family, and we couldn't be happier. Best wishes to you both.
+								<br>
+								"Lots of love and happiness to you both on this exciting and joyful day for our family."
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END HERO SECTION -->
+		
+	</div>
+	<!-- END WRAPPER -->
+	
+	<!-- Libs -->
+	<script src="./js/jquery-3.6.0.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/jquery-migrate-3.3.2.min.js"></script>
+	<script src="./js/bootstrap.bundle.min.js"></script>
+	<script>
+		
+		
+			const year = (new Date().getFullYear()) ;
+			const weddingDate = new Date('march 11 2024 17:30:00 GMT+0300').getTime();
+			// countdown
+			let timer = setInterval(function() {
+
+			// get today's date
+			const today = new Date().getTime();
+
+			// get the difference
+			const diff = weddingDate - today;
+
+			// math
+			let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+			let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+			let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+			// display
+			document.getElementById("timer").innerHTML =
+				"<div class=\"days\"> \
+			<div class=\"numbers\">" + days + "</div>days</div> \
+			<div class=\"hours\"> \
+			<div class=\"numbers\">" + hours + "</div>hours</div> \
+			<div class=\"minutes\"> \
+			<div class=\"numbers\">" + minutes + "</div>minutes</div> \
+			<div class=\"seconds\"> \
+			<div class=\"numbers\">" + seconds + "</div>seconds</div> \
+			</div>";
+
+			}, 1000);
+	</script>
+</body>
+</html>
