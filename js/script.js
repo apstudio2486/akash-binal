@@ -3,7 +3,7 @@
 // ====================== 
 
         const year = (new Date().getFullYear()) ;
-        const weddingDate = new Date('march 11 2024 17:30:00 GMT+0300').getTime();
+        const weddingDate = new Date('march 11 2024 19:00:00 GMT+0300').getTime();
         // countdown
         let timer = setInterval(function() {
 
