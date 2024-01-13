@@ -28,22 +28,22 @@
 				</div>
 			</div>
 		</header>
-		<!-- END HEADER -->
 		
-		
-		<!-- BEGIN HERO SECTION -->
 		<section id="hero" class="bg-slideshow">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
 					
 						<div class="hero-wrapper v-center x-pad">
-							<img src="./images/couple.png" alt="couple image" class="heart"> 
+							<img src="./images/couple.png" alt="couple image" class="heart-shape"> 
 							<h1 class="hero-title light ">
 								<span data-animation-direction="from-left" data-animation-delay="300">Akash</span>
 								<small data-animation-direction="from-center" data-animation-delay="300">&</small>
 								<span data-animation-direction="from-right" data-animation-delay="300">Binal</span>
 							</h1>
+							<div class="image">
+								<img src="./images/proposal.png" alt="couple">
+							</div>
 							<div class="hero-subtitle light" data-animation-direction="fade" data-animation-delay="1000">MAR <span>11</span> 2024 </div>
 							<div class="counter" id="timer"> </div>
 							<p data-animation-direction="fade" data-animation-delay="600">
@@ -56,49 +56,10 @@
 				</div>
 			</div>
 		</section>
-		<!-- END HERO SECTION -->
-		
 	</div>
-	<!-- END WRAPPER -->
-	
-	<!-- Libs -->
-	<script src="./js/jquery-3.6.0.min.js"></script>
-	<script src="./js/jquery-ui.min.js"></script>
-	<script src="./js/jquery-migrate-3.3.2.min.js"></script>
-	<script src="./js/bootstrap.bundle.min.js"></script>
-	<script>
-		
-		
-			const year = (new Date().getFullYear()) ;
-			const weddingDate = new Date('march 11 2024 17:30:00 GMT+0300').getTime();
-			// countdown
-			let timer = setInterval(function() {
-
-			// get today's date
-			const today = new Date().getTime();
-
-			// get the difference
-			const diff = weddingDate - today;
-
-			// math
-			let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-			let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-			let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-			let seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-			// display
-			document.getElementById("timer").innerHTML =
-				"<div class=\"days\"> \
-			<div class=\"numbers\">" + days + "</div>days</div> \
-			<div class=\"hours\"> \
-			<div class=\"numbers\">" + hours + "</div>hours</div> \
-			<div class=\"minutes\"> \
-			<div class=\"numbers\">" + minutes + "</div>minutes</div> \
-			<div class=\"seconds\"> \
-			<div class=\"numbers\">" + seconds + "</div>seconds</div> \
-			</div>";
-
-			}, 1000);
-	</script>
 </body>
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./js/jquery-ui.min.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/script.js"></script>
 </html>
