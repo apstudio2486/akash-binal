@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<title>Akash Weds Binal | Web Invitaion</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link rel="icon" href="./images/favicon.ico" sizes="any">	
+	<link href="./css/fontawesome-all.min.css" rel="stylesheet" />
+	<meta content="wedding" name="keywords">
+	<meta content="Invitaion" name="keywords">
+	<meta property="og:title" content="Akash weds Binal | Wedding Invitation"> 
+	<meta property="og:description" content="We are invite you to our wedding ceremony">
+	<meta property="og:image" content="https://apstudio2486.github.io/akash-binal/images/share.png">
+	<meta property="og:url" content="https://apstudio2486.github.io/akash-binal">
+</head>
+<style>
+@font-face {
+	font-family: "Playfair Display";
+	src: url("../webfonts/playfairdisplay-regular.woff2") format("woff2"), url("../webfonts/playfairdisplay-regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Poppins, sans-serif;
+	font-size: 15px;
+    box-sizing: border-box;
+    background-color: #3d5963;
+    width: 100vw;
+}
+.conatiner{
+    width: 60%;
+    margin: 0 auto;
+}
+.center-box{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-row{
+    border-radius: 10px;
+    overflow:hidden ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(251,251,251, 0.4);
+}
+.box{
+    text-align: center;
+    width: 50%;
+}
+.image-section{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('./images/side.png');
+}
+.image-section img{
+    opacity: 0;
+}
+.counter-section{
+    padding: 30px;
+}
+.border-line{
+    width: 30%;
+}
+#timer {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: .7em;
+	letter-spacing: 2px;
+	margin: 2%;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+	display: inline-block;
+    color: #3d5963;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, .08);
+	width: 100px;
+	border-radius: 5px;
+    margin: 1%;
+}
+@media (max-width:992px){
+    .conatiner{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .center-box{
+        height: auto;
+        margin: 30px 0;
+    }
+    .box-row{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(251,251,251, 0.4);
+    }
+    .box{
+        text-align: center;
+        width: 100%;
+    }
+}
+@media (max-width:768px){
+	.days,
+	.hours,
+	.minutes,
+	.seconds {
+		margin-bottom: 2%;
+		display: inline-block;
+		padding: 20px;
+		background-color: rgba(0, 0, 0, .08);
+		width: 100px;
+		border-radius: 5px;
+	}
+}
+
+.numbers {
+	font-size: 5em;
+}
+.heart {
+	position: fixed;
+	font-size: 1.5rem;
+	z-index: 999;
+	top: -1vh;
+	color: rgba(251,251,251, .8);
+	transform: translateY(0);
+	animation: fall 3s linear forwards;
+}
+
+::-webkit-scrollbar{
+	/* width: 1px; */
+	background-color: rgba(61, 89, 99, .8);
+}
+  
+
+@keyframes fall {
+	from {
+		transform: translateY(0vh) translateX(-10vw); 
+	}
+	to {
+		transform: translateY(105vh) translateX(10vw); 
+	}
+} 
+</style>
+<body>
+    <div class="center-box">
+		<div class="conatiner">
+            <div class="box-row">
+                <div class="box">
+                    <div class="image-section">
+                        <img src="./images/side.png" max-width="100%" alt="couple-image">
+                    </div>
+                </div>
+                <div class="box counter-section">
+                    <img src="./images/shape.png" class="border-line" alt="top-border">
+                    <div class="sticker">
+                        <img src="./images/proposal.png">
+                    </div>
+                    <div class="counter" id="timer">
+                        <div class="days">
+                            <div class="numbers">00</div>
+                            days
+                        </div>         
+                        <div class="hours">         
+                            <div class="numbers">00</div>
+                            hours
+                        </div>         
+                        <div class="minutes">         
+                            <div class="numbers">00</div>
+                            minutes
+                        </div>         
+                        <div class="seconds">         
+                            <div class="numbers">00</div>
+                            seconds
+                        </div>         
+                    </div>
+                    <img src="./images/shape.png" class="border-line" alt="bottom-border">
+                </div>
+            </div>
+		</div>
+    </div>
+</body>
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./js/script.js"></script>
+</html>
