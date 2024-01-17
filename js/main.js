@@ -1,8 +1,16 @@
-// ====================== 
-// ====================== DAY Counter
-// ====================== 
+;(function () {
+	
+	'use strict';
 
-        const year = (new Date().getFullYear()) ;
+	// Loading page
+	var loaderPage = function() {
+		$(".fh5co-loader").fadeOut("slow");
+	};
+	
+	// Loading page
+
+	var counter = function() {
+		const year = (new Date().getFullYear()) ;
         const weddingDate = new Date('march 11 2024 19:00:00 GMT+0300').getTime();
         // countdown
         let timer = setInterval(function() {
@@ -32,24 +40,11 @@
         </div>";
 
         }, 1000);
-            
-// ====================== 
-// ====================== Heart Rain
-// ====================== 
+	};
+	
+	$(function(){
+		loaderPage();
+		counter();
+	});
 
-function createHeart() {
-    const heart = document.createElement('div');
-    heart.classList.add('heart');
-    
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = Math.random() * 2 + 3 + "s";
-    
-    heart.innerHTML = '<i class="fas fa-heart"></i>';
-    
-    document.body.appendChild(heart);
-    
-    setTimeout(() => {
-                heart.remove();
-                }, 5000);
-}
-setInterval(createHeart, 300);
+}());
