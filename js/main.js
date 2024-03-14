@@ -3,10 +3,10 @@
 	var loaderPage = function() {
 		$(".fh5co-loader").fadeOut("slow");
 	};
-
+    
+    const weddingDate = new Date('April 26 2024 19:00:00 GMT+0300').getTime();
     var counter = function() {
 		const year = (new Date().getFullYear()) ;
-        const weddingDate = new Date('march 11 2024 19:00:00 GMT+0300').getTime();
         let timer = setInterval(function() {
 
         const today = new Date().getTime();
@@ -29,6 +29,10 @@
         </div>";
 
     }, 1000);
+    if(new Date().getTime() >= weddingDate){
+        clearInterval(timer);
+        document.getElementById("timer").innerHTML = " "
+    }
 
 	};
     
